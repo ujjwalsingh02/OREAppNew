@@ -9,9 +9,23 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet var homeScreenTopPercentLabel: UILabel!
+    @IBOutlet var homeScreenTotalPointsLabel: UILabel!
+    @IBOutlet var homeScreenCurrentStreakDaysLabel: UILabel!
+    @IBOutlet var homeScreenTotalUserLabel: UILabel!
+    @IBOutlet var homeScreenCurrentRank: UILabel!
+    @IBOutlet var homeScreenPointsLabel: UILabel!
+    @IBOutlet var homeScreenLevelLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        homeScreenLevelLabel.text = "Level " + String(user1.level.currLevel) + " |"
+        homeScreenPointsLabel.text = String(user1.points.currLevelPoints) + " Points"
+        homeScreenCurrentRank.text = String(user1.userRank.currRank)
+        homeScreenTotalUserLabel.text = "/"+String(user1.userRank.totalUser)
+        homeScreenCurrentStreakDaysLabel.text = String(user1.streak.currDays)
+        homeScreenTotalPointsLabel.text = String(user1.points.totalPoints)
+        homeScreenTopPercentLabel.text = "Top " + String((Float((user1.userRank.currRank))/Float((user1.userRank.totalUser)))*100) + "%"
     }
 
     
