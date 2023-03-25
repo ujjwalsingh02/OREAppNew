@@ -9,9 +9,21 @@ import UIKit
 
 class LeaderboardViewController: UIViewController {
 
+    @IBOutlet weak var currentRankLabel: UILabel!
+    
+    @IBOutlet weak var totalPlayersLabel: UILabel!
+    
+    @IBOutlet weak var pointsLabel: UILabel!
+    
+    @IBOutlet weak var pointsBox: UILabel!
+    @IBOutlet weak var rankBoxNumber: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        currentRankLabel.text = String(leaderBoard1.rank.currRank)
+        totalPlayersLabel.text = "/" + String(leaderBoard1.rank.totalUser)
+        pointsLabel.text = String(leaderBoard1.points.currLevelPoints)
+        rankBoxNumber.text = String(leaderBoard1.rank.currRank)
+        pointsBox.text = String(leaderBoard1.points.currLevelPoints)
         // Do any additional setup after loading the view.
     }
     
