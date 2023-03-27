@@ -22,7 +22,6 @@
 		0CA26FFB29C9996E0041DF4A /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA26FFA29C9996E0041DF4A /* LeaderboardViewController.swift */; };
 		0CA26FFD29C999800041DF4A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA26FFC29C999800041DF4A /* SettingsViewController.swift */; };
 		0CA26FFF29C999970041DF4A /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA26FFE29C999970041DF4A /* LevelsViewController.swift */; };
-		0CA2700129C99AE50041DF4A /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2700029C99AE50041DF4A /* TestCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		0CA26FFA29C9996E0041DF4A /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		0CA26FFC29C999800041DF4A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0CA26FFE29C999970041DF4A /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
-		0CA2700029C99AE50041DF4A /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,6 @@
 				0C9EC13B29BDD948008520F3 /* SceneDelegate.swift */,
 				0C9EC13D29BDD948008520F3 /* HomeViewController.swift */,
 				0C9EC13F29BDD948008520F3 /* Main.storyboard */,
-				0CA2700029C99AE50041DF4A /* TestCollectionViewController.swift */,
 				0CA26FFE29C999970041DF4A /* LevelsViewController.swift */,
 				0CA26FFC29C999800041DF4A /* SettingsViewController.swift */,
 				0CA26FFA29C9996E0041DF4A /* LeaderboardViewController.swift */,
@@ -287,7 +284,6 @@
 				0C9EC13C29BDD948008520F3 /* SceneDelegate.swift in Sources */,
 				0CA26FF929C998DD0041DF4A /* GameViewController.swift in Sources */,
 				0C9EC14429BDD948008520F3 /* OREAppNew.xcdatamodeld in Sources */,
-				0CA2700129C99AE50041DF4A /* TestCollectionViewController.swift in Sources */,
 				0CA26FFD29C999800041DF4A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

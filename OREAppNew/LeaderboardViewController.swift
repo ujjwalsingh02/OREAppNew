@@ -13,8 +13,10 @@ class LeaderboardViewController: UIViewController {
     
     @IBOutlet weak var totalPlayersLabel: UILabel!
     
+    @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
     
+    @IBOutlet weak var ProfilePhoto: UIImageView!
     @IBOutlet weak var pointsBox: UILabel!
     @IBOutlet weak var rankBoxNumber: UILabel!
     override func viewDidLoad() {
@@ -23,7 +25,9 @@ class LeaderboardViewController: UIViewController {
         totalPlayersLabel.text = "/" + String(leaderBoard1.rank.totalUser)
         pointsLabel.text = String(leaderBoard1.points.currLevelPoints)
         rankBoxNumber.text = String(leaderBoard1.rank.currRank)
-        pointsBox.text = String(leaderBoard1.points.currLevelPoints)
+        pointsBox.text = String(leaderBoard1.points.totalPoints)+" Points"
+        NameLabel.text = String(leaderBoard1.user.userName)
+        ProfilePhoto.image = UIImage(named: "sample-profile")
         // Do any additional setup after loading the view.
     }
     

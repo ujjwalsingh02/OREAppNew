@@ -9,9 +9,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var ProfilePhoto: UIImageView!
+    @IBOutlet weak var Name: UILabel!
+    @IBOutlet weak var UserName: UILabel!
+    @IBOutlet weak var BackgroundImage: UIImageView!
+        override func viewDidLoad() {
         super.viewDidLoad()
-
+        ProfilePhoto.image = UIImage(named: "sample-profile")
+        UserName.text = String(user1.userName)
+        Name.text = String(user1.name)
+        BackgroundImage.image = UIImage(named: "ORE 2 Small")
         // Do any additional setup after loading the view.
     }
     
