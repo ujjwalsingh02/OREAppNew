@@ -8,10 +8,20 @@
 import UIKit
 
 class LevelsViewController: UIViewController {
-
+    @IBOutlet weak var LevelNumberLabel: UILabel!
+    @IBOutlet weak var PointsSelectedLevelLabel: UILabel!
+    @IBOutlet weak var PlayButton: UIButton!
+    @IBOutlet weak var LevelNumber: UILabel!
+    @IBOutlet weak var LevelStatus: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        LevelNumberLabel.text = "Level " +  String(level1.currLevel) + "/" + String(level1.totalLevels)
+        PointsSelectedLevelLabel.text = String(user1.points.currLevelPoints)
+        PlayButton.tintColor = UIColor(named: "green")
+        //Add the func/if else to choose the image
+        //How to store true and false
+        
         // Do any additional setup after loading the view.
     }
     
