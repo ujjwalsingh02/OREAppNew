@@ -15,9 +15,12 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var profilePhoto: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userName.text = UserDefaults.standard.value(forKey: "username") as? String
+        name.text = UserDefaults.standard.value(forKey: "name") as? String
         profilePhoto.image = UIImage(named: "sample-profile")
-        userName.text = String(user1.userName)
-        name.text = String(user1.name)
+//        userName.text = String(user1.userName)
+//        name.text = String(user1.name)
         backgroundImages[0].image = UIImage(named: "ORE 2 Small")
         // Do any additional setup after loading the view.
     }

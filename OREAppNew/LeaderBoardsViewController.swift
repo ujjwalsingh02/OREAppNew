@@ -10,12 +10,10 @@ import UIKit
 class LeaderBoardsViewController: UIViewController {
 
     
-    
     @IBOutlet weak var leaderboardTableView: UITableView!
     @IBOutlet weak var totalPointsLabel: UILabel!
     @IBOutlet weak var totalUserLabel: UILabel!
     @IBOutlet weak var currentRankLabel: UILabel!
-    
     
     var leaderboardUser = [LeaderboardPage]()
     

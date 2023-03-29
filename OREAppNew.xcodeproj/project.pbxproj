@@ -23,6 +23,7 @@
 		0C9F18DB29D38AE6004BA112 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9F18DA29D38AE6004BA112 /* LeaderboardTableViewCell.swift */; };
 		0CA26FF929C998DD0041DF4A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA26FF829C998DD0041DF4A /* GameViewController.swift */; };
 		0CA26FFF29C999970041DF4A /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA26FFE29C999970041DF4A /* LevelsViewController.swift */; };
+		0CFF243F29D45AEA006FFCB2 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF243E29D45AEA006FFCB2 /* LoginScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		0C9F18DA29D38AE6004BA112 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		0CA26FF829C998DD0041DF4A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		0CA26FFE29C999970041DF4A /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
+		0CFF243E29D45AEA006FFCB2 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				0C9EC13B29BDD948008520F3 /* SceneDelegate.swift */,
 				0C9EC13D29BDD948008520F3 /* HomeViewController.swift */,
 				0C9EC13F29BDD948008520F3 /* Main.storyboard */,
+				0CFF243E29D45AEA006FFCB2 /* LoginScreenViewController.swift */,
 				0C9F18DA29D38AE6004BA112 /* LeaderboardTableViewCell.swift */,
 				0C9F18D829D3821D004BA112 /* LeaderBoardsViewController.swift */,
 				0C9F18D629D2E002004BA112 /* SettingViewController.swift */,
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFF243F29D45AEA006FFCB2 /* LoginScreenViewController.swift in Sources */,
 				0CA26FFF29C999970041DF4A /* LevelsViewController.swift in Sources */,
 				0C013C6A29BE308F0067941D /* DataModel.swift in Sources */,
 				0C9EC13E29BDD948008520F3 /* HomeViewController.swift in Sources */,

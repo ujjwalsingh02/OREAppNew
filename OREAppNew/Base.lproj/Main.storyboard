@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lmz-jX-hhu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xEZ-bh-ane">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4067.9389312977096" y="-388.02816901408454"/>
+            <point key="canvasLocation" x="2176" y="-606"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="1Wb-if-3ca">
@@ -985,11 +985,78 @@
             </objects>
             <point key="canvasLocation" x="6999" y="-238"/>
         </scene>
+        <!--Login Screen View Controller-->
+        <scene sceneID="qyw-TV-9ha">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="xEZ-bh-ane" customClass="LoginScreenViewController" customModule="OREAppNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FcK-o7-d9R">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="initialdesign3" translatesAutoresizingMaskIntoConstraints="NO" id="an5-Ve-lEu">
+                                <rect key="frame" x="-35" y="-46" width="455" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXv-bh-V8G">
+                                <rect key="frame" x="-4" y="272" width="401" height="364"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0GV-CK-8tn">
+                                        <rect key="frame" x="20" y="79" width="361" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.001945111614" blue="0.13929606959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="IbX-kz-IEP">
+                                        <rect key="frame" x="20" y="122" width="361" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.001945111614" blue="0.13929606959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="gVW-Od-dbR">
+                                        <rect key="frame" x="20" y="165" width="361" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0019451116144982073" blue="0.13929606958762886" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMr-MP-ZdB">
+                                        <rect key="frame" x="20" y="292" width="361" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Login"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="xEZ-bh-ane" eventType="touchUpInside" id="c5B-9P-c0Z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.001945111614" blue="0.13929606959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l4x-l4-Hnb"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="0GV-CK-8tn" id="FHc-pE-DuQ"/>
+                        <outlet property="passwordTextField" destination="gVW-Od-dbR" id="2XH-gW-xei"/>
+                        <outlet property="usernameTextField" destination="IbX-kz-IEP" id="aN3-0F-aei"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edc-TT-5cW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209.92366412213741" y="25.35211267605634"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="F1H-8L-r4d">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lmz-jX-hhu" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="homeStart" automaticallyAdjustsScrollViewInsets="NO" id="lmz-jX-hhu" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="THv-Vq-LMZ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JWy-Sr-5QV">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1005,7 +1072,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXW-Fp-pRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1465" y="-14"/>
+            <point key="canvasLocation" x="1034" y="330"/>
         </scene>
         <!--Leader Boards View Controller-->
         <scene sceneID="jAl-DT-o4d">
@@ -1287,10 +1354,10 @@
             </objects>
             <point key="canvasLocation" x="3026.7175572519081" y="484.50704225352115"/>
         </scene>
-        <!--View Controller-->
+        <!--EditUsername-->
         <scene sceneID="aZA-zj-O0T">
             <objects>
-                <viewController id="wlU-Kc-noh" sceneMemberID="viewController">
+                <viewController title="EditUsername" id="wlU-Kc-noh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8su-C7-VKs">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1566,7 +1633,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2F-yZ-nPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3098" y="-388"/>
+            <point key="canvasLocation" x="1132" y="-606"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1578,6 +1645,7 @@
         <image name="ORE 2 Small" width="320" height="213"/>
         <image name="Rectangle 5" width="393" height="668"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
+        <image name="initialdesign3" width="622" height="436"/>
         <image name="lock.circle" catalog="system" width="128" height="123"/>
         <image name="moonphase.new.moon" catalog="system" width="128" height="123"/>
         <image name="play.circle.fill" catalog="system" width="128" height="123"/>

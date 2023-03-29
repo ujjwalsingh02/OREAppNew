@@ -16,9 +16,15 @@ class HomeViewController: UIViewController {
     @IBOutlet var homeScreenCurrentRank: UILabel!
     @IBOutlet var homeScreenPointsLabel: UILabel!
     @IBOutlet var homeScreenLevelLabel: UILabel!
-    override func viewDidLoad() {
+    
+    var userpass : String = ""
+    var namepass : String = ""
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+            
+            
         homeScreenLevelLabel.text = "Level " + String(user1.level.currLevel) + " |"
         homeScreenPointsLabel.text = String(user1.points.currLevelPoints) + " Points"
         homeScreenCurrentRank.text = String(user1.userRank.currRank)

@@ -81,12 +81,15 @@ struct Leaderboard{
 }
 
 
-var user1 = User(id: 1, userName: "ujjwaall", name: "Ujjwalsingh",points: Points(currLevelPoints: 40, totalPointsOfLevel: 50 ,totalPoints: 1500), userRank: (Rank(currRank: 4, totalUser: 75)), level: Level(currLevel: 4, attempts: 2, totalLevels: 7, numberOfColors: 8, locked: false, attempted: true), streak: Streak(startDate: Date(), currDays: 1, reward: Points(currLevelPoints: 10, totalPointsOfLevel: 50, totalPoints: 1500)), userImageName: "ORE 2 Small")
+var user1 = User(id: 1, userName: (UserDefaults.standard.value(forKey: "username") as? String)!, name: (UserDefaults.standard.value(forKey: "name") as? String)!,points: Points(currLevelPoints: 40, totalPointsOfLevel: 50 ,totalPoints: 1500), userRank: (Rank(currRank: 4, totalUser: 75)), level: Level(currLevel: 4, attempts: 2, totalLevels: 7, numberOfColors: 8, locked: false, attempted: true), streak: Streak(startDate: Date(), currDays: 1, reward: Points(currLevelPoints: 10, totalPointsOfLevel: 50, totalPoints: 1500)), userImageName: "ORE 2 Small")
 //var user1=User(id: 1, userName: "ujjwaall", name: "Ujjwalsingh Rajput",points: Points(currLevelPoints: 10, totalPoints: 1000), level: Level(currLevel: 4, attempts: 2, time: 600, numberOfColors: 8, result: false), streak: Streak(startDate: Date(), currDays: 0, reward: Points(currLevelPoints: 10, totalPoints: 1000)), userImageName: "ORE 2 Small")
 
 var level1 = Level(currLevel: 1, attempts: 5,totalLevels: 7, numberOfColors: 8, locked: false, attempted: true)
 
 var leaderBoard1 = Leaderboard(points: Points(currLevelPoints: 40, totalPointsOfLevel: 50,totalPoints: 1500), rank: Rank(currRank: 1, totalUser: 75), user: user1, image: "sample-profile")
+
+
+
 struct DataModel{
 //    private var users : User
     
