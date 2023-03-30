@@ -31,7 +31,7 @@ class SettingViewController: UIViewController {
         user1.userRank.currRank = user1.userRank.totalUser
         user1.level.currLevel = 1
         user1.streak.currDays = 1
-        
+        user1.reset.reset = true
     }
     
     
@@ -41,6 +41,8 @@ class SettingViewController: UIViewController {
     
     @IBAction func changeBackgroundButtonPressed(_ sender: UIButton) {
     }
+    
+    
     /*
     // MARK: - Navigation
 

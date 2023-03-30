@@ -23,7 +23,14 @@ class HomeViewController: UIViewController {
         override func viewDidLoad() {
         super.viewDidLoad()
         
-            
+            if(user1.reset.reset)
+            {
+                user1.points.totalPoints = 0;
+                user1.points.totalPointsOfLevel = 0;
+                user1.userRank.currRank = user1.userRank.totalUser
+                user1.level.currLevel = 1
+                user1.streak.currDays = 1
+            }
             
         homeScreenLevelLabel.text = "Level " + String(user1.level.currLevel) + " |"
         homeScreenPointsLabel.text = String(user1.points.currLevelPoints) + " Points"
@@ -32,6 +39,8 @@ class HomeViewController: UIViewController {
         homeScreenCurrentStreakDaysLabel.text = String(user1.streak.currDays)
         homeScreenTotalPointsLabel.text = String(user1.points.totalPoints)
         homeScreenTopPercentLabel.text = "Top " + String((Float((user1.userRank.currRank))/Float((user1.userRank.totalUser)))*100) + "%"
+            
+          
     }
 
     
