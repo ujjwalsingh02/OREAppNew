@@ -7,6 +7,7 @@ import UIKit
 
 
 var leaderboardUsers : [String] = [""]
+var levelPageUsers : [String] = [""]
 struct User{
     let id : Int
     let userName : String
@@ -58,6 +59,16 @@ struct Streak{
 struct BackgroundImage{
     var images : [UIImage]
 }
+
+class LevelPage{
+    var currentLevel: Int
+    var levelStatus: String
+    init(currentLevel: Int, levelStatus: String) {
+        self.currentLevel = currentLevel
+        self.levelStatus = levelStatus
+    }
+}
+var levelPageUser : [LevelPage] = []
 
 class LeaderboardPage{
     var username : String

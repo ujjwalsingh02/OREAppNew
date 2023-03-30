@@ -7,33 +7,46 @@
 
 import UIKit
 
-class LevelsViewController: UIViewController {
-    @IBOutlet weak var LevelNumberLabel: UILabel!
-    @IBOutlet weak var PointsSelectedLevelLabel: UILabel!
-    @IBOutlet weak var PlayButton: UIButton!
-    @IBOutlet weak var LevelNumber: UILabel!
-    @IBOutlet weak var LevelStatus: UILabel!
+class LevelsViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var CurrentLevelLabel: UILabel!
+    @IBOutlet weak var CurrentLevelPoints: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LevelNumberLabel.text = "Level " +  String(level1.currLevel) + "/" + String(level1.totalLevels)
-        PointsSelectedLevelLabel.text = String(user1.points.currLevelPoints)
-        PlayButton.tintColor = UIColor(named: "green")
-        //Add the func/if else to choose the image
-        //How to store true and false
+        CurrentLevelLabel.text  = String(user1.level.currLevel)
+        CurrentLevelPoints.text = String(user1.points.currLevelPoints)
         
-        // Do any additional setup after loading the view.
+        let user1 = LevelPage(currentLevel: 1, levelStatus: "Level Completed")
+        levelPageUser.append(user1)
+        
+        let user2 = LevelPage(currentLevel: 2, levelStatus: "Level Completed")
+        levelPageUser.append(user2)
+        
+        let user3 = LevelPage(currentLevel: 3, levelStatus: "Begin Level")
+        levelPageUser.append(user3)
+        
+        let user4 = LevelPage(currentLevel: 4, levelStatus: "Level Locked")
+        levelPageUser.append(user4)
+        
+        let user5 = LevelPage(currentLevel: 5, levelStatus: "Level Locked")
+        levelPageUser.append(user5)
+        
+        tabel.tableFooterView = UIView(frame: .zero)
+    }
+    @IBOutlet weak var tabel: UITableView!
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return levelPageUser.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tabel.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as! LevelTableViewCell
+        
+        
+        return cell
+        
+        
     }
-    */
-
+    
 }
