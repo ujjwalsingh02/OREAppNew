@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="7rt-4U-xFt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7rt-4U-xFt">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7rt-4U-xFt" secondAttribute="height" multiplier="393:769" id="c0v-lx-JZZ"/>
@@ -253,6 +253,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="D4o-ME-SOS"/>
                     <connections>
+                        <outlet property="bgImage" destination="7rt-4U-xFt" id="0Wd-QM-pmM"/>
                         <outlet property="homeScreenCurrentRank" destination="pUb-zf-2zr" id="7ei-4u-Qba"/>
                         <outlet property="homeScreenCurrentStreakDaysLabel" destination="xgi-3N-t16" id="b8h-ss-N2W"/>
                         <outlet property="homeScreenLevelLabel" destination="gfI-vF-gz6" id="T7X-sW-4nN"/>
@@ -745,7 +746,7 @@
                                                 <rect key="frame" x="8" y="8" width="361" height="85"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 5" translatesAutoresizingMaskIntoConstraints="NO" id="qtC-mU-oxs">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="qtC-mU-oxs">
                                                 <rect key="frame" x="8" y="101" width="361" height="85"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -758,7 +759,7 @@
                                 <rect key="frame" x="16" y="448" width="361" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Home Screen Background">
+                                <buttonConfiguration key="configuration" style="tinted" title="Change home screen background">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.35075708760000002" green="0.35075708760000002" blue="0.35075708760000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -770,7 +771,7 @@
                                 <rect key="frame" x="16" y="246" width="361" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Edit Profile">
+                                <buttonConfiguration key="configuration" style="tinted" title="Edit profile">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.35075708760000002" green="0.35075708760000002" blue="0.35075708760000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -782,7 +783,7 @@
                                 <rect key="frame" x="16" y="315" width="361" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Reset Data">
+                                <buttonConfiguration key="configuration" style="tinted" title="Reset data">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.35075708760000002" green="0.35075708760000002" blue="0.35075708760000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -794,7 +795,7 @@
                                 <rect key="frame" x="16" y="381" width="361" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Log Out">
+                                <buttonConfiguration key="configuration" style="tinted" title="Log out">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.35075708760000002" green="0.35075708760000002" blue="0.35075708760000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -1051,7 +1052,7 @@
     <resources>
         <image name="Image 1" width="145" height="36"/>
         <image name="ORE 2 Small" width="320" height="213"/>
-        <image name="Rectangle 5" width="393" height="668"/>
+        <image name="background" width="393" height="668"/>
         <image name="flag.fill" catalog="system" width="128" height="121"/>
         <image name="initialdesign3" width="622" height="436"/>
         <image name="moonphase.new.moon" catalog="system" width="128" height="123"/>

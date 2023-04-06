@@ -17,20 +17,20 @@ class LevelsViewController: UIViewController, UITableViewDataSource, UITableView
         CurrentLevelLabel.text  = "Level "+String(user1.level.currLevel)+"/"+String(user1.level.totalLevels)
         CurrentLevelPoints.text = String(user1.points.currLevelPoints)+" Points"
         
-        let user1 = LevelPage(currentLevel: 1, levelStatus: "Level Completed", locked: false, attempted: true)
-        levelPageUser.append(user1)
+        let level1 = LevelPage(currentLevel: 1, levelStatus: "Level Completed", locked: false, attempted: true)
+        levelPageUser.append(level1)
         
-        let user2 = LevelPage(currentLevel: 2, levelStatus: "Level Completed", locked: false, attempted: true)
-        levelPageUser.append(user2)
+        let level2 = LevelPage(currentLevel: 2, levelStatus: "Level Completed", locked: false, attempted: true)
+        levelPageUser.append(level2)
         
-        let user3 = LevelPage(currentLevel: 3, levelStatus: "Begin Level", locked: false, attempted: false)
-        levelPageUser.append(user3)
+        let level3 = LevelPage(currentLevel: 3, levelStatus: "Begin Level", locked: false, attempted: false)
+        levelPageUser.append(level3)
         
-        let user4 = LevelPage(currentLevel: 4, levelStatus: "Level Locked", locked: true, attempted: false)
-        levelPageUser.append(user4)
+        let level4 = LevelPage(currentLevel: 4, levelStatus: "Level Locked", locked: true, attempted: false)
+        levelPageUser.append(level4)
         
-        let user5 = LevelPage(currentLevel: 5, levelStatus: "Level Locked", locked: true, attempted: false)
-        levelPageUser.append(user5)
+        let level5 = LevelPage(currentLevel: 5, levelStatus: "Level Locked", locked: true, attempted: false)
+        levelPageUser.append(level5)
         
         tabel.tableFooterView = UIView(frame: .zero)
         tabel.dataSource = self

@@ -7,8 +7,10 @@
 
 import UIKit
 
+var globalBackgroundImage : UIImage! = UIImage(named: "background")
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet var homeScreenTopPercentLabel: UILabel!
     @IBOutlet var homeScreenTotalPointsLabel: UILabel!
     @IBOutlet var homeScreenCurrentStreakDaysLabel: UILabel!
@@ -22,16 +24,6 @@ class HomeViewController: UIViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
-        
-            
-        homeScreenLevelLabel.text = "Level " + String(user1.level.currLevel) + " |"
-        homeScreenPointsLabel.text = String(user1.points.currLevelPoints) + " Points"
-        homeScreenCurrentRank.text = String(user1.userRank.currRank)
-        homeScreenTotalUserLabel.text = "/"+String(user1.userRank.totalUser)
-        homeScreenCurrentStreakDaysLabel.text = String(user1.streak.currDays)
-        homeScreenTotalPointsLabel.text = String(user1.points.totalPoints)
-        homeScreenTopPercentLabel.text = "Top " + String((Float((user1.userRank.currRank))/Float((user1.userRank.totalUser)))*100) + "%"
-            
           
     }
     
@@ -43,6 +35,7 @@ class HomeViewController: UIViewController {
         homeScreenCurrentStreakDaysLabel.text = String(user1.streak.currDays)
         homeScreenTotalPointsLabel.text = String(user1.points.totalPoints)
         homeScreenTopPercentLabel.text = "Top " + String((Float((user1.userRank.currRank))/Float((user1.userRank.totalUser)))*100) + "%"
+        bgImage.image = globalBackgroundImage
          
     }
     
