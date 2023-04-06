@@ -75,7 +75,7 @@ class SettingViewController: UIViewController {
         
                     var user2 : User = user1
                     user1 = guest
-                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "homeStart") as! UITabBarController
+                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "Login") as! UIViewController
                     
                     controller.modalPresentationStyle = .fullScreen
                 controller.modalTransitionStyle = .crossDissolve
