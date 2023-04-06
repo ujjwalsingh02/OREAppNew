@@ -26,6 +26,7 @@ class GameTableViewCell: UITableViewCell {
     }
     
     @IBAction func submitButtonPressed(_ sender: UIButton) {
+//        GameViewController().AttemptsRemaingLabel.text = "Attempts left: " + String(user1.level.attempts - attempts_used)
         let check = checkCount()
 
         if check{

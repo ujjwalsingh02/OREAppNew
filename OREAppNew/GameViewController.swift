@@ -13,6 +13,9 @@ var secretCode : [String] = ["", "", "", ""]
 var colors : [String] = ["red", "green", " vibrant yellow", "dark blue", "cyan blue", "dark magenta", "orange", "brown"]
 
 class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var AttemptsRemaingLabel: UILabel!
+    
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return level1.attempts
         }
@@ -26,6 +29,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
+            AttemptsRemaingLabel.text = "Attempts left: " + String(user1.level.attempts)
             myTableView.delegate = self
             myTableView.dataSource = self
             colorButtons[0].tintColor = UIColor.systemRed
@@ -42,11 +46,16 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     //        secretCode = ["red", "green", "yellow","blue"]
             print(secretCode)
         }
+    
 
+        override func viewWillAppear(_ animated: Bool) {
+            print("From the controller", attempts_used)
+            AttemptsRemaingLabel.text = "Attempts left: " + String(user1.level.attempts - attempts_used)
+        }
+    
         var selectedInputButton: UIButton?
         var number : Int = -1
-        //var countRow : Int = 0
-            // ...
+        var countRow : Int = 0
 
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! GameTableViewCell

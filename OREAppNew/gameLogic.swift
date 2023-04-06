@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
- 
+var attempts_used : Int = 0
 var countRow = 0
 // code generate karne ke liye
 func generateSecretCode() -> [String]{
@@ -34,6 +34,7 @@ func checkCount() -> Bool{
             countRow = countRow + 1
         }
     }
+    attempts_used = countRow/4
     print(count)
     if count == 4{
         return true
@@ -41,6 +42,7 @@ func checkCount() -> Bool{
     else{
         return false
     }
+    
 }
 
 
@@ -62,9 +64,9 @@ func compareGuessToSecretCode(guess: [String], secretCode: [String]) -> (cpos: I
             }
         }
     }
-    var attempts_used : Int
+   
     if(cpos == 4){
-            attempts_used = countRow/4
+            
         print("Attempts used = ", attempts_used)
         print(user1.level.attempts - attempts_used)
         if(user1.level.attempts - attempts_used >= 5 ){
