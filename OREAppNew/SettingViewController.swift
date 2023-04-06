@@ -23,11 +23,17 @@ class SettingViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewDidLoad()
         userName.text = user1.userName
         name.text = user1.name
-        profilePhoto.image = UIImage(named: user1.userImageName)
+        if dpchanged{
+            profilePhoto.image = dpImage
+        }else{
+            profilePhoto.image = UIImage(named: user1.userImageName)
+        }
         backgroundImages[0].image = UIImage(named: "ORE 2 Small")
     }
+    
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         
@@ -69,7 +75,7 @@ class SettingViewController: UIViewController {
         
                     var user2 : User = user1
                     user1 = guest
-                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "homeStart") as! UITabBarController
+                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "Login") as! UIViewController
                     
                     controller.modalPresentationStyle = .fullScreen
                 controller.modalTransitionStyle = .crossDissolve
@@ -91,17 +97,30 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func changeBackgroundButtonPressed(_ sender: UIButton) {
+       
+        let vc = UIImagePickerController()
+        vc.delegate = self
+        vc.sourceType = .photoLibrary
+        vc.allowsEditing = true
+        present(vc, animated: true)
+        
     }
     
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+
+extension SettingViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage") ] as? UIImage{
+            globalBackgroundImage = image
+        }
+        picker.dismiss(animated: true,completion: nil)
     }
-    */
 
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
