@@ -2,28 +2,77 @@
 //  GameViewController.swift
 //  OREAppNew
 //
-//  Created by Ujjwalsingh Rajput on 21/03/23.
+//  Created by Ujjwalsingh Rajput on 06/04/23.
 //
 
 import UIKit
 
-class GameViewController: UIViewController {
+var guess : [String] = ["", "", "", ""]
+//var count = 0
+var secretCode : [String] = ["", "", "", ""]
+var colors : [String] = ["red", "green", " vibrant yellow", "dark blue", "cyan blue", "dark magenta", "orange", "brown"]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return level1.attempts
+        }
+        
 
-        // Do any additional setup after loading the view.
-    }
-    
+        @IBOutlet weak var myTableView: UITableView!
+        
+        @IBOutlet var colorButtons: [UIButton]!
+        
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view.
+            myTableView.delegate = self
+            myTableView.dataSource = self
+            colorButtons[0].tintColor = UIColor.systemRed
+            colorButtons[1].tintColor = UIColor.systemGreen
+            colorButtons[2].tintColor = UIColor.systemYellow
+            colorButtons[3].tintColor = UIColor.blue
+            colorButtons[4].tintColor = UIColor.systemCyan
+            colorButtons[5].tintColor = UIColor.magenta
+            colorButtons[6].tintColor = UIColor.systemOrange
+            colorButtons[7].tintColor = UIColor.systemBrown
+            
+    //        print(guess)
+            secretCode = generateSecretCode()
+    //        secretCode = ["red", "green", "yellow","blue"]
+            print(secretCode)
+        }
 
-    /*
-    // MARK: - Navigation
+        var selectedInputButton: UIButton?
+        var number : Int = -1
+            // ...
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+            func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! GameTableViewCell
+                
+                // Set the target and action for all the table input buttons
+                for button in cell.tableInputButtons {
+                    button.addTarget(self, action: #selector(tableInputButtonPressed(_:)), for: .touchUpInside)
+                }
+
+                return cell
+            }
+
+            @objc func tableInputButtonPressed(_ sender: UIButton) {
+                // Store the selected input button
+                selectedInputButton = sender
+                number = sender.tag
+            }
+
+        @IBAction func colorButtonPressed(_ sender: UIButton) {
+            guard let selectedButton = selectedInputButton else { return }
+
+                    // Set the tint color of the selected input button to the color of the pressed color button
+            selectedButton.tintColor = sender.tintColor
+            guess[number] = (sender.tintColor).accessibilityName
+            print(guess)
+        }
+        
+
 
 }

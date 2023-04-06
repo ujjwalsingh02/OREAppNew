@@ -27,10 +27,10 @@ class LoginScreenViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-        let alert = UIAlertController(title: "Saving", message: "Save Login Details?", preferredStyle: .alert)
+//        let alert = UIAlertController(title: "Saving", message: "Save Login Details?", preferredStyle: .alert)
         
-        let yesButton = UIAlertAction(title: "Yes", style: .default){
-            (action) in
+//        let yesButton = UIAlertAction(title: "Yes", style: .default){
+//            (action) in
             
             UserDefaults.standard.set(self.nameTextField.text!, forKey: "name")
             UserDefaults.standard.set(self.usernameTextField.text! , forKey: "username")
@@ -39,28 +39,28 @@ class LoginScreenViewController: UIViewController {
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "homeStart") as! UITabBarController
             
             controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .coverVertical
+        controller.modalTransitionStyle = .crossDissolve
 
             self.present(controller,animated: true,completion: nil)
-        }
-        
-        let noButton = UIAlertAction(title: "No", style: .default){
-            (action) in
-            print("You have not saved login details.")
-
-            
-            let controller = self.storyboard?.instantiateViewController(withIdentifier: "homeStart") as! UITabBarController
-            
-            controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .coverVertical
-
-            self.present(controller,animated: true,completion: nil)
-        }
-        
-        alert.addAction(yesButton)
-        alert.addAction(noButton)
-        
-        present(alert,animated: true,completion: nil)
+//        }
+//
+//        let noButton = UIAlertAction(title: "No", style: .default){
+//            (action) in
+//            print("You have not saved login details.")
+//
+//
+//            let controller = self.storyboard?.instantiateViewController(withIdentifier: "homeStart") as! UITabBarController
+//
+//            controller.modalPresentationStyle = .fullScreen
+//            controller.modalTransitionStyle = .coverVertical
+//
+//            self.present(controller,animated: true,completion: nil)
+//        }
+//
+//        alert.addAction(yesButton)
+//        alert.addAction(noButton)
+//
+//        present(alert,animated: true,completion: nil)
         
         
     }
