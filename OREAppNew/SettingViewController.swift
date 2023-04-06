@@ -23,11 +23,17 @@ class SettingViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewDidLoad()
         userName.text = user1.userName
         name.text = user1.name
-        profilePhoto.image = UIImage(named: user1.userImageName)
+        if dpchanged{
+            profilePhoto.image = dpImage
+        }else{
+            profilePhoto.image = UIImage(named: user1.userImageName)
+        }
         backgroundImages[0].image = UIImage(named: "ORE 2 Small")
     }
+    
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         
@@ -93,6 +99,8 @@ class SettingViewController: UIViewController {
     @IBAction func changeBackgroundButtonPressed(_ sender: UIButton) {
     }
     
+    
+    @IBAction func unwindToSettings(_ sender : UIStoryboardSegue){}
     
     /*
     // MARK: - Navigation
