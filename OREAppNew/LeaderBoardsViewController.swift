@@ -71,7 +71,7 @@ extension LeaderBoardsViewController : UITableViewDelegate, UITableViewDataSourc
         cell.rankLabel.text = "\(indexPath.row+1)"
         cell.usernameLabel.text = leaderboardUser[indexPath.row].username
         cell.pointsLabel.text = "\(leaderboardUser[indexPath.row].points)"
-        cell.userImage.image = UIImage(named: "sample-profile")
+        cell.userImage.image = UIImage(named: "dp")
         cell.notChangingPoint.text = "Points"
         
         return cell
