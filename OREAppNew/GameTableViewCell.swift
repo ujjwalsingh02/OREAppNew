@@ -36,12 +36,13 @@ class GameTableViewCell: UITableViewCell {
         }
         
         guess = ["", "", "", ""]
+        
     }
     
     func outputDisplay(yell : Int, gree : Int){
-        if(yell+gree)>4{
-            print("GT 4")
-        }
+//        if(yell+gree)>4{
+//            print("GT 4")
+//        }
         for i in 0..<yell{
             outputSymbol[i].tintColor = .yellow
         }
@@ -51,12 +52,21 @@ class GameTableViewCell: UITableViewCell {
         for i in yell..<yell+gree{
             outputSymbol[i].tintColor = .green
         }
+        if(gree == 4){
+            showCompletionScreen()
+        }
+        func showCompletionScreen(){
+            let alert = UIAlertController(title: "LEVEL COMPLETED", message: "YOU SCORED \(user1.points.currLevelPoints)", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Home", style: .default, handler: {
+                action in
+            }))
+            self.present(alert, animated: true)
+        }
+
+            
 
     }
-    
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

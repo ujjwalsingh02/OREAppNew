@@ -87,9 +87,60 @@ func compareGuessToSecretCode(guess: [String], secretCode: [String]) -> (cpos: I
         else{
             user1.points.currLevelPoints = 0
         }
+        
     }
         print("You have scored ", user1.points.currLevelPoints, "Points")
+    
     return (cpos, ccol) // Return the tuple containing cpos and ccol
 }
 
 
+//let alert = UIAlertController(title: "Edit profile", message: "Are you sure you want to make these changes to your profile?", preferredStyle: .alert)
+//
+//let yesButton = UIAlertAction(title: "Yes", style: .default){
+//    (action) in
+//
+//        user1.userName = self.editUsernameTextField.text!
+//    self.dismiss(animated: true)
+//
+//}
+
+
+//@IBAction func changeUsernameButtonPressed(_ sender: UIButton) {
+//
+//    if editUsernameTextField.text == confirmTextField.text{
+//        
+//        let alert = UIAlertController(title: "Edit profile", message: "Are you sure you want to make these changes to your profile?", preferredStyle: .alert)
+//
+//        let yesButton = UIAlertAction(title: "Yes", style: .default){
+//            (action) in
+//
+//                user1.userName = self.editUsernameTextField.text!
+//            self.dismiss(animated: true)
+//
+//        }
+//        //
+//        let noButton = UIAlertAction(title: "No", style: .default){
+//            (action) in
+//
+//        }
+//        //
+//        alert.addAction(yesButton)
+//        alert.addAction(noButton)
+//
+//        present(alert,animated: true,completion: nil)
+//
+//    }
+//    else{
+//
+//        let alert = UIAlertController(title: "Invalid Username", message: "Please enter same values in both the field.", preferredStyle: .alert)
+//
+//        let okButton = UIAlertAction(title: "Ok", style: .default){
+//            (action) in
+//
+//
+//        }
+//        alert.addAction(okButton)
+//        present(alert,animated: true,completion: nil)
+//    }
+//}

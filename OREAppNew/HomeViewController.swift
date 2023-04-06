@@ -34,7 +34,8 @@ class HomeViewController: UIViewController {
         homeScreenTotalUserLabel.text = "/"+String(user1.userRank.totalUser)
         homeScreenCurrentStreakDaysLabel.text = String(user1.streak.currDays)
         homeScreenTotalPointsLabel.text = String(user1.points.totalPoints)
-        homeScreenTopPercentLabel.text = "Top " + String((Float((user1.userRank.currRank))/Float((user1.userRank.totalUser)))*100) + "%"
+        homeScreenTopPercentLabel.text = "Top " +
+        String((Float((user1.userRank.currRank))/Float((user1.userRank.totalUser)))*100) + "%"
         bgImage.image = globalBackgroundImage
          
     }
