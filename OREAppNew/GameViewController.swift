@@ -49,8 +49,8 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 
         override func viewWillAppear(_ animated: Bool) {
-            print("From the controller", attempts_used)
-            AttemptsRemaingLabel.text = "Attempts left: " + String(user1.level.attempts - attempts_used)
+           // print("From the controller", attempts_used)
+  //          AttemptsRemaingLabel.text = "Attempts left: " + String(user1.level.attempts - attempts_used)
         }
     
         var selectedInputButton: UIButton?
