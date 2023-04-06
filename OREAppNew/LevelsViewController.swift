@@ -32,6 +32,21 @@ class LevelsViewController: UIViewController, UITableViewDataSource, UITableView
         let level5 = LevelPage(currentLevel: 5, levelStatus: "Level Locked", locked: true, attempted: false)
         levelPageUser.append(level5)
         
+        let level6 = LevelPage(currentLevel: 6, levelStatus: "Level Locked", locked: true, attempted: false)
+        levelPageUser.append(level6)
+        
+        let level7 = LevelPage(currentLevel: 7, levelStatus: "Level Locked", locked: true, attempted: false)
+        levelPageUser.append(level7)
+        
+        let level8 = LevelPage(currentLevel: 8, levelStatus: "Level Locked", locked: true, attempted: false)
+        levelPageUser.append(level8)
+        
+        let level9 = LevelPage(currentLevel: 9, levelStatus: "Level Locked", locked: true, attempted: false)
+        levelPageUser.append(level9)
+        
+        let level10 = LevelPage(currentLevel: 10, levelStatus: "Level Locked", locked: true, attempted: false)
+        levelPageUser.append(level10)
+        
         tabel.tableFooterView = UIView(frame: .zero)
         tabel.dataSource = self
         tabel.delegate = self

@@ -7,7 +7,7 @@
 
 import UIKit
 
-var globalBackgroundImage : UIImage! = UIImage(named: "background")
+var globalBackgroundImage : UIImage! = UIImage(named: "Image 4")
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var bgImage: UIImageView!
