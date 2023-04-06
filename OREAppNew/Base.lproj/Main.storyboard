@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xEZ-bh-ane">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xEZ-bh-ane">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -571,7 +572,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mQI-ye-LMm">
                                 <rect key="frame" x="16" y="206" width="361" height="612"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableViewCell" rowHeight="70" id="UhH-Nt-qwd" customClass="LeaderboardTableViewCell" customModule="OREAppNew" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="70"/>
@@ -733,7 +736,7 @@
         <!--Settings-->
         <scene sceneID="nWp-Rb-Qef">
             <objects>
-                <viewController id="ZD0-PZ-Y9p" customClass="SettingViewController" customModule="OREAppNew" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settings" id="ZD0-PZ-Y9p" customClass="SettingViewController" customModule="OREAppNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fab-ug-J7p">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -832,7 +835,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="wrench.and.screwdriver" catalog="system" id="8zH-QT-Zob"/>
                     <connections>
                         <outlet property="name" destination="NUT-8k-yx4" id="bVU-Uo-waG"/>
-                        <outlet property="profilePhoto" destination="Vs5-1A-kDZ" id="C6g-tz-5Ni"/>
+                        <outlet property="profilePhoto" destination="f3K-uX-AaN" id="Anb-yL-E1d"/>
                         <outlet property="userName" destination="dwt-Op-BCk" id="Hwk-1L-7O6"/>
                         <outletCollection property="backgroundImages" destination="Vs5-1A-kDZ" collectionClass="NSMutableArray" id="2jZ-ws-cNa"/>
                     </connections>
@@ -844,9 +847,9 @@
         <!--EditUsername-->
         <scene sceneID="aZA-zj-O0T">
             <objects>
-                <viewController title="EditUsername" id="wlU-Kc-noh" sceneMemberID="viewController">
+                <viewController title="EditUsername" id="wlU-Kc-noh" customClass="EditProfileViewController" customModule="OREAppNew" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8su-C7-VKs">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-Rd-XbT">
@@ -880,12 +883,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="changeUsernameButtonPressed:" destination="wlU-Kc-noh" eventType="touchUpInside" id="tXD-ID-a5K"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m4x-M4-nv8"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="j3K-bh-2Cn"/>
+                    <connections>
+                        <outlet property="confirmTextField" destination="vMI-l1-cbM" id="XTC-3x-Glq"/>
+                        <outlet property="editUsernameTextField" destination="bHz-SA-Kz0" id="8xv-XZ-7oF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11h-SB-xwh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1049,9 +1059,6 @@
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

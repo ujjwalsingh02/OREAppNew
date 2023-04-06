@@ -16,27 +16,78 @@ class SettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userName.text = UserDefaults.standard.value(forKey: "username") as? String
-        name.text = UserDefaults.standard.value(forKey: "name") as? String
-        profilePhoto.image = UIImage(named: "sample-profile")
-//        userName.text = String(user1.userName)
-//        name.text = String(user1.name)
+        userName.text = user1.userName
+        name.text = user1.name
+        profilePhoto.image = UIImage(named: user1.userImageName)
         backgroundImages[0].image = UIImage(named: "ORE 2 Small")
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        userName.text = user1.userName
+        name.text = user1.name
+        profilePhoto.image = UIImage(named: user1.userImageName)
+        backgroundImages[0].image = UIImage(named: "ORE 2 Small")
     }
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
-        user1.points.totalPoints = 0;
-        user1.points.totalPointsOfLevel = 0;
-        user1.userRank.currRank = user1.userRank.totalUser
-        user1.level.currLevel = 1
-        user1.streak.currDays = 1
-        user1.reset.reset = true
+        
+        let alert = UIAlertController(title: "Reset", message: "Are you sure you want to reset all your progress?", preferredStyle: .alert)
+                
+        let yesButton = UIAlertAction(title: "Yes", style: .default){
+                    (action) in
+                    
+            print("You have opted to reset all your data.")
+                    
+            user1.points.totalPoints = 0;
+            user1.points.totalPointsOfLevel = 0;
+            user1.userRank.currRank = user1.userRank.totalUser
+            user1.level.currLevel = 1
+            user1.streak.currDays = 1
+        }
+        //
+                let noButton = UIAlertAction(title: "No", style: .default){
+                    (action) in
+                    
+                }
+        //
+                alert.addAction(yesButton)
+                alert.addAction(noButton)
+        
+                present(alert,animated: true,completion: nil)
+                
+                
     }
     
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Log Out", message: "Are you sure you want to log out?", preferredStyle: .alert)
+                
+                let yesButton = UIAlertAction(title: "Yes", style: .default){
+                    (action) in
+                    
+                    print("You have opted to log out.")
         
+                    var user2 : User = user1
+                    user1 = guest
+                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "homeStart") as! UITabBarController
+                    
+                    controller.modalPresentationStyle = .fullScreen
+                controller.modalTransitionStyle = .crossDissolve
+
+                    self.present(controller,animated: true,completion: nil)
+                }
+        //
+                let noButton = UIAlertAction(title: "No", style: .default){
+                    (action) in
+                 
+                }
+        //
+                alert.addAction(yesButton)
+                alert.addAction(noButton)
+        
+                present(alert,animated: true,completion: nil)
+                
+                
     }
     
     @IBAction func changeBackgroundButtonPressed(_ sender: UIButton) {
