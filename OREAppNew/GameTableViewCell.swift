@@ -31,6 +31,7 @@ class GameTableViewCell: UITableViewCell {
         if check{
             let (gree, yell) = compareGuessToSecretCode(guess: guess, secretCode: secretCode)
             outputDisplay(yell: yell, gree: gree)
+            
         }
         
         guess = ["", "", "", ""]
