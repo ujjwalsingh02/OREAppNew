@@ -7,8 +7,8 @@
 
 import Foundation
 import UIKit
-
-
+ 
+var countRow = 0
 // code generate karne ke liye
 func generateSecretCode() -> [String]{
     var secretCode: [String] = []
@@ -27,9 +27,11 @@ func generateSecretCode() -> [String]{
 // dekhne ke liye count 4 hai ya nhi
 func checkCount() -> Bool{
     var count = 0
+
     for i in guess{
         if i != "" {
             count = count + 1
+            countRow = countRow + 1
         }
     }
     print(count)
@@ -60,6 +62,33 @@ func compareGuessToSecretCode(guess: [String], secretCode: [String]) -> (cpos: I
             }
         }
     }
+    var attempts_used : Int
+    if(cpos == 4){
+            attempts_used = countRow/4
+        print("Attempts used = ", attempts_used)
+        print(user1.level.attempts - attempts_used)
+        if(user1.level.attempts - attempts_used >= 5 ){
+            user1.points.currLevelPoints = user1.points.totalPointsOfLevel
+        }
+        else if(user1.level.attempts - attempts_used == 4){
+            user1.points.currLevelPoints = user1.points.totalPointsOfLevel - 10
+        }
+        else if(user1.level.attempts - attempts_used == 3){
+            user1.points.currLevelPoints = user1.points.totalPointsOfLevel - 20
+        }
+        else if(user1.level.attempts - attempts_used == 2){
+            user1.points.currLevelPoints = user1.points.totalPointsOfLevel - 30
+        }
+        else if(user1.level.attempts - attempts_used == 1){
+            user1.points.currLevelPoints = user1.points.totalPointsOfLevel - 50
+        }
+        else{
+            user1.points.currLevelPoints = 0
+        }
+        print("You have scored ", user1.points.currLevelPoints, "Points")
+        
+    }
+    
     
     return (cpos, ccol) // Return the tuple containing cpos and ccol
 }

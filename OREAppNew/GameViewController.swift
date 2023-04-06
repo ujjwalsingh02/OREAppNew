@@ -16,7 +16,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return level1.attempts
         }
-        
+   // navigationItem.title = "Attempts left : " + String(AttemptsLeft)
 
         @IBOutlet weak var myTableView: UITableView!
         
@@ -45,11 +45,11 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         var selectedInputButton: UIButton?
         var number : Int = -1
+        //var countRow : Int = 0
             // ...
 
             func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! GameTableViewCell
-                
                 // Set the target and action for all the table input buttons
                 for button in cell.tableInputButtons {
                     button.addTarget(self, action: #selector(tableInputButtonPressed(_:)), for: .touchUpInside)
