@@ -29,7 +29,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
-            AttemptsRemaingLabel.text = "Attempts left: " + String(user1.level.attempts)
+            AttemptsRemaingLabel.text = "Total Attempts: " + String(user1.level.attempts)
             myTableView.delegate = self
             myTableView.dataSource = self
             colorButtons[0].tintColor = UIColor.systemRed
