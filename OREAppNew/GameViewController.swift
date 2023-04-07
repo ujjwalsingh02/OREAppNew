@@ -9,7 +9,7 @@ import UIKit
 
 var guess : [String] = ["", "", "", ""]
 //var count = 0
-var secretCode : [String] = ["", "", "", ""]
+var secretCode : [String] = ["", "", "", ""] //create an empty array using the codeGen
 var colors : [String] = ["red", "green", " vibrant yellow", "dark blue", "cyan blue", "dark magenta", "orange", "brown"]
 
 class GameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -39,7 +39,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
             colorButtons[4].tintColor = UIColor.systemCyan
             colorButtons[5].tintColor = UIColor.magenta
             colorButtons[6].tintColor = UIColor.systemOrange
-            colorButtons[7].tintColor = UIColor.systemBrown
+            colorButtons[7].tintColor = UIColor.systemBrown //iterate to assign the colors to button
             
     //        print(guess)
             secretCode = generateSecretCode()
@@ -48,10 +48,10 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     
 
-        override func viewWillAppear(_ animated: Bool) {
-           // print("From the controller", attempts_used)
-  //          AttemptsRemaingLabel.text = "Attempts left: " + String(user1.level.attempts - attempts_used)
-        }
+//        override func viewWillAppear(_ animated: Bool) {
+//           // print("From the controller", attempts_used)
+//  //          AttemptsRemaingLabel.text = "Attempts left: " + String(user1.level.attempts - attempts_used)
+//        }
     
         var selectedInputButton: UIButton?
         var number : Int = -1
@@ -78,7 +78,7 @@ class GameViewController: UIViewController, UITableViewDelegate, UITableViewData
 
                     // Set the tint color of the selected input button to the color of the pressed color button
             selectedButton.tintColor = sender.tintColor
-            guess[number] = (sender.tintColor).accessibilityName
+            guess[number] = (sender.tintColor).accessibilityName // a new var to assign the color
             print(guess)
         }
         

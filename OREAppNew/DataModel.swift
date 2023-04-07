@@ -101,11 +101,11 @@ struct Settings{
 }
 
 
-var user1 = User(id: 1, userName: (UserDefaults.standard.value(forKey: "username") as? String)!, name: (UserDefaults.standard.value(forKey: "name") as? String)!,points: Points(currLevelPoints: 0, totalPointsOfLevel: 100 ,totalPoints: 1500), userRank: (Rank(currRank: 4, totalUser: 75)), level: Level(currLevel: 4, attempts: 15, totalLevels: 7, numberOfColors: 8, locked: false, attempted: true), streak: Streak(startDate: Date(), currDays: 1, reward: Points(currLevelPoints: 0, totalPointsOfLevel: 100, totalPoints: 1500)), userImageName: "dp")
+var user1 = User(id: 1, userName: (UserDefaults.standard.value(forKey: "username") as? String)!, name: (UserDefaults.standard.value(forKey: "name") as? String)!,points: Points(currLevelPoints: 0, totalPointsOfLevel: 100 ,totalPoints: 1500), userRank: (Rank(currRank: 1, totalUser: 75)), level: Level(currLevel: 1, attempts: 15, totalLevels: 10, numberOfColors: 8, locked: false, attempted: true), streak: Streak(startDate: Date(), currDays: 1, reward: Points(currLevelPoints: 0, totalPointsOfLevel: 100, totalPoints: 1500)), userImageName: "dp")
 
 var guest = User(id: 1000, userName: "guest1578", name: "Guest", points: Points(currLevelPoints: 0, totalPointsOfLevel: 100, totalPoints: 0), userRank: Rank(currRank: 75, totalUser: 75), level: Level(currLevel: 1, attempts: 15, totalLevels: 10, numberOfColors: 8, locked: false, attempted: true), streak: Streak(startDate: Date(), currDays: 1, reward: Points(currLevelPoints: 0, totalPointsOfLevel: 100, totalPoints: 0)), userImageName: "sample-profile")
 
-var level1 = Level(currLevel: 1, attempts: 15,totalLevels: 7, numberOfColors: 8, locked: false, attempted: true)
+var level1 = Level(currLevel: 1, attempts: 15,totalLevels: 10, numberOfColors: 8, locked: false, attempted: true)
 
 var leaderBoard1 = Leaderboard(points: Points(currLevelPoints: 40, totalPointsOfLevel: 50,totalPoints: 1500), rank: Rank(currRank: 1, totalUser: 75), user: user1, image: "dp")
 

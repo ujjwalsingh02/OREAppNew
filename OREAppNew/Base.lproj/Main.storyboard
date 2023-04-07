@@ -316,8 +316,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNP-S2-B42">
                                                     <rect key="frame" x="29" y="15" width="48" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="gray"/>
+                                                    <buttonConfiguration key="configuration" style="gray" title="S"/>
                                                     <connections>
                                                         <action selector="submitButtonPressed:" destination="d1c-sJ-fgo" eventType="touchUpInside" id="d5O-Cp-dMw"/>
                                                     </connections>

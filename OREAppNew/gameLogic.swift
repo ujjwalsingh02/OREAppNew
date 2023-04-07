@@ -24,7 +24,7 @@ func generateSecretCode() -> [String]{
     
     return secretCode
 }
-
+// Time for assigning notification to the user -> local notif ->coustom
 // dekhne ke liye count 4 hai ya nhi
 func checkCount() -> Bool{
     var count = 0

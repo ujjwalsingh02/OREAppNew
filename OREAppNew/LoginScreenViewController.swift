@@ -20,7 +20,7 @@ class LoginScreenViewController: UIViewController {
             
             usernameTextField.text = UserDefaults.standard.value(forKey: "username") as? String
             nameTextField.text = UserDefaults.standard.value(forKey: "name") as? String
-            passwordTextField.text = UserDefaults.standard.value(forKey: "password") as? String
+            passwordTextField.text = UserDefaults.standard.value(forKey: "password") as? String //use keychain
         }
         
     }
@@ -32,10 +32,10 @@ class LoginScreenViewController: UIViewController {
 //        let yesButton = UIAlertAction(title: "Yes", style: .default){
 //            (action) in
             
-            UserDefaults.standard.set(self.nameTextField.text!, forKey: "name")
+            UserDefaults.standard.set(self.nameTextField.text!, forKey: "name")//optionals - gaurd let
             UserDefaults.standard.set(self.usernameTextField.text! , forKey: "username")
             UserDefaults.standard.set(self.passwordTextField.text!, forKey: "password")
-            
+            //add validation - regex pattern
             let controller = self.storyboard?.instantiateViewController(withIdentifier: "homeStart") as! UITabBarController
             
             controller.modalPresentationStyle = .fullScreen
